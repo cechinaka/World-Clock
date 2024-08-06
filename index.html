@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
   <link rel="stylesheet" href="src/style.css" />
   <title>World Clock Project</title>
 </head>
@@ -23,20 +25,28 @@
     <div class="city">
       <div>
         <h2>Honolulu 🇺🇸</h2>
-        <div class="date">August 6, 2024</div>
+        <div class="date" id="honoluluDate">August 6, 2024</div>
       </div>
-      <div class="time">12:04:15 <small>PM</small></div>
+      <div class="time" id="honoluluTime">12:04:15 <small>PM</small></div>
+    </div>
+
+    <div class="city">
+      <div>
+        <h2>Heidelberg 🇩🇪</h2>
+        <div class="date" id="heidelbergDate"></div>
+      </div>
+    <div class="time" id="heidelbergTime"><small></small></div>
     </div>
 
     <div class="city">
       <div>
         <h2>Tokyo 🇯🇵</h2>
-        <div class="date">August 6, 2024</div>
+        <div class="date" id="tokyoDate">August 6, 2024</div>
       </div>
-    <div class="time">12:04:15 <small>PM</small></div>
+    <div class="time" id="tokyoTime">12:04:15 <small>PM</small></div>
     </div>
 
-    </div>
+  </div>
   <br />
 
   <footer>This project was coded by <a href="https://github.com/cechinaka" target="_blank"><strong>Christie Chinaka</strong></a> and is open sourced on <a href="https://github.com/cechinaka/World-Clock" target="_blank">GitHub</a> and hosted on <a href="https://frabjous-monstera-cce538.netlify.app" target="_blank">Netlify</a></footer>
