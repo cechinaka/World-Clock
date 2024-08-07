@@ -14,38 +14,40 @@
       <h1>🗺️ World Clock</h1>
     </header>
 
-    <select>
+    <select id="city">
       <option value="">Select a city...</option>
-      <option value="moscow">Moscow</option>
-      <option value="vaduz">Vaduz</option>
-      <option value="qikiqtarjuaq">Qikiqtarjuaq</option>
-      <option value="timbuktu">Timbuktu</option>
+      <option value="Europe/Moscow" id="moscow">Moscow 🇷🇺</option>
+      <option value="Africa/Timbuktu" id="timbuktu">Timbuktu 🇲🇱</option>
+      <option value="Asia/Tokyo" id="tokyo">Tokyo  🇯🇵</option>
+      <option value="Europe/Vaduz" id="vaduz">Vaduz 🇱🇮</option>
     </select>
 
-    <div class="city">
-      <div>
-        <h2>Honolulu 🇺🇸</h2>
-        <div class="date" id="honoluluDate">August 6, 2024</div>
+    <div id="cities">
+      <div class="city">
+        <div>
+          <h2>Honolulu 🇺🇸</h2>
+          <div class="date" id="honoluluDate"></div>
+        </div>
+        <div class="time" id="honoluluTime"><small></small></div>
       </div>
-      <div class="time" id="honoluluTime">12:04:15 <small>PM</small></div>
-    </div>
 
-    <div class="city">
-      <div>
-        <h2>Heidelberg 🇩🇪</h2>
-        <div class="date" id="heidelbergDate"></div>
+      <div class="city">
+        <div>
+          <h2>Qikiqtarjuaq 🇨🇦</h2>
+          <div class="date" id="qikiqtarjuaqDate"></div>
+        </div>
+      <div class="time" id="qikiqtarjuaqTime"><small></small></div>
       </div>
-    <div class="time" id="heidelbergTime"><small></small></div>
-    </div>
 
-    <div class="city">
-      <div>
-        <h2>Tokyo 🇯🇵</h2>
-        <div class="date" id="tokyoDate">August 6, 2024</div>
+      <div class="city">
+        <div>
+          <h2>Heidelberg 🇩🇪</h2>
+          <div class="date" id="heidelbergDate"></div>
+        </div>
+      <div class="time" id="heidelbergTime"><small></small></div>
       </div>
-    <div class="time" id="tokyoTime">12:04:15 <small>PM</small></div>
-    </div>
 
+    </div>
   </div>
   <br />
 
