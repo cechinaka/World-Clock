@@ -29,7 +29,7 @@ function updateCity(event) {
     let cityTimeZone = event.target.value;
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
-        let citiesElement =  document.querySelector("#cities");
+    let citiesElement =  document.querySelector("#cities");
     citiesElement.innerHTML = `
     <div class="city">
       <div>
@@ -37,11 +37,13 @@ function updateCity(event) {
         <div class="date">${cityTime.format("ddd, MMMM Do YYYY")}</div>
       </div>
       <div>
-        <div class="time">${cityTime.format("h:mm:ss.SS [<small>]A[</small>]")}</div>
-      </div>`;
+        <div class="time" id="newTime">${cityTime.format("h:mm:ss.SS [<small>]A[</small>]")}</div>
+      </div>
+    </div>`;
   }
 }
 
 
 let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", myStopFunction);
 citiesSelectElement.addEventListener("change", updateCity);
