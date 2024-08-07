@@ -27,6 +27,9 @@ function myStopFunction() {
 function updateCity(event) {
   if (event.target.value.length > 0) {
     let cityTimeZone = event.target.value;
+    if(cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement =  document.querySelector("#cities");
@@ -34,7 +37,7 @@ function updateCity(event) {
     <div class="city">
       <div>
         <h2>${cityName}</h2>
-        <div class="date">${cityTime.format("ddd, MMMM Do YYYY")}</div>
+        <div class="date">${cityTime.format("ddd, MMMM Do, YYYY")}</div>
       </div>
       <div>
         <div class="time" id="newTime">${cityTime.format("h:mm:ss.SS [<small>]A[</small>]")}</div>
